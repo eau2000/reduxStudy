@@ -4,9 +4,7 @@
     <list default="true" id="399b0e63-4965-4184-b064-ab22ca51ad25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Count/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Count/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612264580532</updated>
       <workItem from="1612264584613" duration="3667000" />
-      <workItem from="1612360650944" duration="2102000" />
+      <workItem from="1612360650944" duration="2252000" />
+      <workItem from="1612403793216" duration="2228000" />
     </task>
     <servers />
   </component>

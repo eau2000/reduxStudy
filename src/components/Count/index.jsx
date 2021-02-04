@@ -6,26 +6,32 @@ class Count extends Component {
     state = {car:'劳斯莱斯'}
     increment = () => {
         const {value} = this.selectNumber
-        const {count} = this.state
-        this.setState({count:count+value*1})
+        // 通知redux加value
+        store.dispatch({type:'increment', data:value*1})
     }
+    // componentDidMount() {
+    //     // 检测redux中状态变化，只要变化就调用render
+    //     // redux里面任何状态改变都会执行回调
+    //     store.subscribe(() => {
+    //         this.setState({})
+    //     })
+    // }
+
     decrement = () => {
         const {value} = this.selectNumber
-        const {count} = this.state
-        this.setState({count:count-value*1})
+        store.dispatch({type:'decrement', data:value*1})
     }
     incrementIfOdd = () => {
         const {value} = this.selectNumber
-        const {count} = this.state
+        const count = store.getState()
         if(count%2 !== 0){
-            this.setState({count:count+value*1})
+            store.dispatch({type:'increment', data:value*1})
         }
     }
     incrementAsync = () => {
         const {value} = this.selectNumber
-        const {count} = this.state
         setTimeout(() => {
-            this.setState({count:count+value*1})
+            store.dispatch({type:'increment', data:value*1})
         },1000)
     }
     render() {
