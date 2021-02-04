@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import store from "../../redux/store";
+import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from "../../redux/count_action";
 
 class Count extends Component {
     // state = {count:0}
@@ -7,7 +8,7 @@ class Count extends Component {
     increment = () => {
         const {value} = this.selectNumber
         // 通知redux加value
-        store.dispatch({type:'increment', data:value*1})
+        store.dispatch(createIncrementAction(value*1))
     }
     // componentDidMount() {
     //     // 检测redux中状态变化，只要变化就调用render
@@ -19,20 +20,20 @@ class Count extends Component {
 
     decrement = () => {
         const {value} = this.selectNumber
-        store.dispatch({type:'decrement', data:value*1})
+        store.dispatch(createDecrementAction(value*1))
     }
     incrementIfOdd = () => {
         const {value} = this.selectNumber
         const count = store.getState()
         if(count%2 !== 0){
-            store.dispatch({type:'increment', data:value*1})
+            store.dispatch(createIncrementAction(value*1))
         }
     }
     incrementAsync = () => {
         const {value} = this.selectNumber
-        setTimeout(() => {
-            store.dispatch({type:'increment', data:value*1})
-        },1000)
+        // setTimeout(() => {
+        store.dispatch(createIncrementAsyncAction(value*1, 3000))
+        // },1000)
     }
     render() {
         return (
