@@ -21,6 +21,7 @@ class Count extends Component {
 
     decrement = () => {
         const {value} = this.selectNumber
+        this.props.jian(value*1)
         // store.dispatch(createDecrementAction(value*1))
     }
     incrementIfOdd = () => {
@@ -29,12 +30,16 @@ class Count extends Component {
         // if(count%2 !== 0){
             // store.dispatch(createIncrementAction(value*1))
         // }
+        if (this.props.count%2!==0){
+            this.props.jia(value*1)
+        }
     }
     incrementAsync = () => {
         const {value} = this.selectNumber
         // setTimeout(() => {
         // store.dispatch(createIncrementAsyncAction(value*1, 3000))
         // },1000)
+        this.props.jiaAsync(value*1,2000)
     }
     render() {
         return (
